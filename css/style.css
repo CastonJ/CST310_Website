@@ -1,0 +1,162 @@
+/* main page css */
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+}
+
+.main_page {
+    background-image: url("../images/Company_Portal.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.main_page h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    animation: glow 2s infinite alternate;
+    font-family: 'times new roman', serif;
+}
+
+
+/* Top NAV bar */
+
+/* Top NAV bar */
+.topnav {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Keep the hamburger on the far left */
+.topnav a.icon {
+    position: absolute;
+    left: 16px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+/* End NAV bar */
+
+/* Side NAV bar */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-size: 20px;
+    font-family: 'times new roman', serif;
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sideNavSpan {
+    position: inherit;
+
+}
+
+
+.sidenav a:hover {
+    color: forestgreen;
+}
+
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 1px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* Side NAV bar end */
+
+
+/* Main page side news bar */
+.flex_side {
+    position: absolute;        
+    top: 120px;                
+    right: 20px;               
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 2;
+}
+
+.flex_side > div {
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.flex_side h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+}
+
+.flex_side p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Main page side news bar end */
+
+
+
+
