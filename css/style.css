@@ -157,14 +157,139 @@ body {
 
 /* Main page side news bar end */
 
+/* =========================
+    Upload Page Styling
+========================= */
 
+
+
+/* Main area below nav */
+.upload_page {
+    min-height: calc(100vh - 48px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+
+    /* Background for the page content */
+    background-image: url("../images/Registration_Background.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Optional: dark overlay for readability */
+.upload_page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+/* Frosted Glass Card */
+.upload_card {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 460px;
+
+    padding: 38px;
+    border-radius: 16px;
+
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #fff;
+}
+
+/* Title */
+.upload_card h1 {
+    margin: 0 0 18px 0;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Upload message styling */
+.upload_message {
+    margin: 0 0 18px 0;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.upload_message.success {
+    color: #0bd07a;
+    background: rgba(11, 208, 122, 0.12);
+    border: 1px solid rgba(11, 208, 122, 0.25);
+}
+
+.upload_message.error {
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.12);
+    border: 1px solid rgba(255, 77, 77, 0.25);
+}
+
+/* Upload Drop Zone */
+.upload_box {
+    display: block;
+    border: 2px dashed rgba(255, 255, 255, 0.35);
+    padding: 28px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin: 0 0 20px 0;
+    user-select: none;
+}
+
+.upload_box:hover {
+    border-color: #04AA6D;
+    background: rgba(4, 170, 109, 0.12);
+    transform: translateY(-1px);
+}
+
+/* Hide actual file input */
+.upload_box input[type="file"] {
+    display: none;
+}
+
+/* Button */
+.upload_button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+
+    background-color: #04AA6D;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.upload_button:hover {
+    background-color: #038f5a;
+    transform: translateY(-2px);
+}
+
+.upload_button:active {
+    transform: translateY(0);
+}
 
 /* ===============================
         Registration Page
 ================================ */
 
 .background_image {
-    position: fixed;        /* Locks it behind everything */
+    position: fixed;        
     top: 0;
     left: 0;
     width: 100%;
@@ -174,9 +299,8 @@ body {
     background-size: cover;
     background-position: center;
 
-    z-index: -1;            /* Sends it behind everything */
+    z-index: -1;           
 }
-
 
 
 * {
@@ -267,7 +391,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* Optional message styling */
+
 .form_message {
     text-align: center;
     margin-bottom: 15px;
@@ -275,3 +399,138 @@ body {
 
 
 
+/* Login Page */
+
+/* =========================
+   Login Page
+========================= */
+
+.login_page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    /* background image */
+    background-image: url("../images/Registration_Background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* dark overlay so text/card pops */
+.login_page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* keep card above overlay */
+.login_wrapper {
+    position: relative;
+    width: min(520px, 92vw);
+    text-align: center;
+}
+
+/* Title */
+.login_wrapper h1 {
+    margin: 0 0 18px 0;
+    font-size: 2rem;
+    color: #111;
+}
+
+/* Card */
+.login_card {
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 16px;
+    padding: 34px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+.form_message {
+    margin: 0 0 18px 0;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.form_message.success {
+    color: #0bd07a;
+    background: rgba(11, 208, 122, 0.12);
+    border: 1px solid rgba(11, 208, 122, 0.25);
+}
+
+.form_message.error {
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.12);
+    border: 1px solid rgba(255, 77, 77, 0.25);
+}
+
+/* Form layout */
+.login_form {
+    display: grid;
+    gap: 14px;
+    text-align: left;
+}
+
+.login_form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.login_form input {
+    width: 100%;
+    height: 44px;
+    padding: 10px 12px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.95);
+
+    outline: none;
+    font-size: 16px;
+}
+
+.login_form input:focus {
+    border-color: #04AA6D;
+    box-shadow: 0 0 0 3px rgba(4,170,109,0.25);
+}
+
+/* Button */
+.login_button {
+    margin-top: 6px;
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #04AA6D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.login_button:hover {
+    background: #038f5a;
+    transform: translateY(-2px);
+}
+
+/* Small screens */
+@media (max-width: 420px) {
+    .login_card { padding: 24px; }
+    .login_wrapper h1 { font-size: 1.6rem; }
+}

@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,16 +13,21 @@
 
 <body>
 
-    
-    <!-- Top Navigation Bar -->
-    <div class="topnav">
-        <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
-        <a class="active" href="index.php">Home</a>
+<div class="topnav">
+    <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
+    <a class="active" href="index.php">Home</a>
+
+    <?php if (!isset($_SESSION["user_id"])): ?>
         <a href="login.php">Login</a>
         <a href="registration.php">Register</a>
-        <a href="#contact">Contact</a>
-        
-    </div>
+    <?php else: ?>
+        <a href="profile.php">Profile</a>
+        <a href="logout.php">Logout</a>
+    <?php endif; ?>
+
+    <a href="upload.php">Upload</a>
+    <a href="#contact">Contact</a>
+</div>
 
 
 

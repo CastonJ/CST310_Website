@@ -57,11 +57,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 
+    <!-- Top Navigation Bar -->
 <div class="topnav">
+    <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
     <a class="active" href="index.php">Home</a>
-    <a href="login.php">Login</a>
-    <a href="registration.php">Register</a>
-    <a href="contactus.php">Contact</a>
+
+    <?php if (!isset($_SESSION["user_id"])): ?>
+        <a href="login.php">Login</a>
+        <a href="registration.php">Register</a>
+    <?php else: ?>
+        <a href="profile.php">Profile</a>
+        <a href="logout.php">Logout</a>
+    <?php endif; ?>
+
+    <a href="upload.php">Upload</a>
+    <a href="#contact">Contact</a>
 </div>
 
 <div class="background_image"></div>
