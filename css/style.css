@@ -534,3 +534,106 @@ body {
     .login_card { padding: 24px; }
     .login_wrapper h1 { font-size: 1.6rem; }
 }
+
+
+
+
+/* =========================
+   Profile Page Styling
+========================= */
+
+
+.profile_page {
+    min-height: 100vh;
+    padding: 40px;
+    background-image: url("../images/Registration_Background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.centered_page {
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper */
+.form_wrapper {
+    width: 520px;
+    text-align: center;
+}
+
+    /* Title */
+    .form_wrapper h1 {
+        margin: 0 0 18px 0;
+        font-size: 2rem;
+    }
+
+/* Profile “card” area */
+.profile_info {
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    color: #fff;
+    text-align: left;
+}
+
+/* Each row */
+.profile_row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+    .profile_row:last-child {
+        border-bottom: none;
+    }
+
+    /* Label */
+    .profile_row span {
+        font-weight: 700;
+        color: rgba(255,255,255,0.9);
+    }
+
+    /* Value text */
+    .profile_row p {
+        margin: 0;
+        color: rgba(255,255,255,0.85);
+        word-break: break-word;
+    }
+
+/* Actions area (logout button) */
+.profile_actions {
+    margin-top: 16px;
+}
+
+/* Button-like link */
+.button_primary {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    border-radius: 10px;
+    background: #04AA6D;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+    .button_primary:hover {
+        background: #038f5a;
+        transform: translateY(-1px);
+    }

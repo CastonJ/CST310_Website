@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $db  = new Database();
         $con = $db->createConnection();
 
-        // NOTE: For Week 2 this is okay, but prepared statements are safer.
+       
         // Escape strings to reduce SQL issues
         $emailEsc     = $con->real_escape_string($email);
         $passEsc      = $con->real_escape_string($passwordHash);
