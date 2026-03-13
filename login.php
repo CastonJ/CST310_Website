@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $_SESSION["user_email"] = $user["email"];
                     $_SESSION["first_name"] = $user["firstName"];
                     $_SESSION["last_name"] = $user["lastName"];
+                    $_SESSION["role"] = "employee";
 
                     header("Location: profile.php");
                     exit;
